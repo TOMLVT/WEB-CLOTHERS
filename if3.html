@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOM</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="onda3.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans&family=Roboto:ital,wght@0,400;1,500&display=swap');
+        .thetongquat {
+         
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .info {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        .card {
+            display: flex;
+    height: 400px;
+            flex: 0 1 calc(33.333% - 20px);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+          transform: scale(1.05);
+           }
+           .card img {
+         width: 100%;
+          height: 200px;
+           object-fit: cover;
+           }
+
+           .card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  margin-bottom: 4px;
+  color: red;
+  font-weight: 600;
+}
+.card p h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.card-content h1 {
+    font-size: 14px;
+    color: #737373;
+}
+button {
+    display: flex;
+        margin-left: 17px;
+}
+.card-content button {
+
+  background-color: #0c0c0c;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-content button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid black;
+}
+        .sizes {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .colors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            flex: 0 1 calc(33.333% - 20px);
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 10px;
+            text-align: center;
+        }
+        .info h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #737373;
+    }
+    .info h2 {
+        font-weight: 800;
+    }
+    .info ul {
+        list-style-type: none;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+    .info i {
+        margin: 10px;
+    }
+    .info li {
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+
+    /* Styles for colors */
+    .colors {
+        display: flex;
+       
+        justify-content: center;
+        margin: 40px;
+        margin-bottom: 10px;
+       
+    }
+
+    .color {
+        border: 2px solid grey;
+        width: 30px;
+        height: 20px;
+        border-radius: 10%;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .sizes li  {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: grey;
+        border: 1px solid black;
+    }
+    .sizes a {
+        text-decoration: none;
+        color: #333;
+    }
+    .kiemtra input {
+        margin: 20px;
+    }
+    .kiemtra label {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .card-content h2{
+        font-size: 20px;
+    }
+    /**/
+    
+        info .maupolo {
+            text-decoration: none;
+        }
+
+        .hot-label {
+    display: flex;
+        margin-left: 490px;
+        top: 2px;
+        left: 10px;
+        background-color: red;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        z-index: 2;
+        transition: transform 0.3s ease-in-out;
+    }
+    .hot-label:hover {
+        transform: scale(1.20);
+    }
+    .card-container {
+        position: relative;
+    }
+
+    .card:nth-child(-n+3) {
+        position: relative;
+        z-index: 1;
+    }
+    /*footer*/
+#footer {
+	clear: both;
+	width: 100%;
+	height: 350px;
+	background: black;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+	#footer-contact, #footer-signup{
+		width: 500px;
+		float: left;
+	}
+
+	.icon {
+	  display: inline-block;
+	  vertical-align: top;
+	  overflow: hidden;
+	  margin: 1px;
+	  width: 24px;
+	  height: 24px;
+	  font-size: 0;
+	  text-indent: -9999px;
+	}
+	.icon-mono {
+	  background: url("https://i.imgur.com/zwOnn8F.png");
+	  background-image: url("https://i.imgur.com/zwOnn8F.png"), none;
+	  background-color: #201c1c;
+	  -webkit-transition: background 0.3s;
+	          transition: background 0.3s;
+	}
+
+	.icon-mono.facebook {
+	  background-position: 0 0;
+	}
+
+	.icon-mono.facebook:hover {
+	  background-color: #3b5998;
+	  background-position: 0 -24px;
+	}
+
+	.icon-mono.twitter {
+	  background-position: -24px 0;
+	}
+
+	.icon-mono.twitter:hover {
+	  background-color: #4099ff;
+	  background-position: -24px -24px;
+	}
+
+	.icon-mono.googleplus {
+	  background-position: -48px 0;
+	}
+
+	.icon-mono.googleplus:hover {
+	  background-color: #d34836;
+	  background-position: -48px -24px;
+	}
+
+	.icon-mono.github {
+	  background-position: -72px 0;
+	}
+
+	.icon-mono.github:hover {
+	  background-color: #333333;
+	  background-position: -72px -24px;
+	}
+
+	.icon-mono.rss {
+	  background-position: -96px 0;
+	}
+
+	.icon-mono.rss:hover {
+	  background-color: #ee802f;
+	  background-position: -96px -24px;
+	}
+
+	.footer-title {
+		color: #f5f5f5;
+		text-transform: uppercase;
+		font-size: 95%;
+		font-family: Lato, helvetica, arial, sans-serif;
+		line-height: 1.4;
+		font-weight: bold;
+		margin-top: 15px;
+		cursor: default;
+	}
+
+	.footer-bar {
+		color: #dddddd;
+		background: #ffffff;
+		opacity: .3;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		width: 30px;
+		display: block;
+		height: 3px;
+	}
+
+	.footer-text {
+		color: #dddddd;
+		font-family: Lato, helvetica, arial, sans-serif;
+		font-size: 15px;
+		font-weight: normal;
+		line-height: 1.6;
+		margin-bottom: 1.2em;
+		cursor: default;
+	}
+
+	#footer-contact {
+		margin-left: 50px;
+	}
+
+	#footer input[type='text'] {
+		width: 300px;
+		height: 30px;
+		padding: 5px;
+		font-size: 13px;
+		border: 1px solid #ccc;
+		outline: medium none;
+	}
+		#footer input[type='text']:focus {
+			background: #fff;
+			border-color: #999;			
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+			color: rgba(0, 0, 0, 0.75);
+			transition: .3s;
+		}
+
+	#footer input[type='submit'] {
+		background: #000000;
+		border: 1px solid #dcd4d1;
+		color: #fff;
+		padding: 7px;
+		width: 100px;
+		transition: .2s;
+		cursor: pointer;
+	}
+		#footer input[type='submit']:hover {
+			background: rgb(77, 84, 79);
+		}
+
+/*end*/
+
+/*thong tin the hinh anh*/
+.thehinhanh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cardimg {
+  position: relative;
+  width: 300px;
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-right: 10px; 
+
+}
+
+.cardimg:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+}
+
+.button9-container9 {
+  text-align: center;
+  margin-top: 10px; 
+}
+.button9-container9 i {
+    margin: 5px;
+}
+.button9-view9 {
+    margin-left: 20px;
+    padding: 8px 12px;
+  background-color: #ffffff;
+  color: rgb(3, 3, 3);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button9-container9 .button9-view9{
+    display: flex;
+    margin-left: 70px;
+    font-weight: 800;
+}
+ /*end*/
+/*ket luan 2*/
+.theketluan2 {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px 20px;
+      text-align: center;
+    }
+
+    .coolmate-listen {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .footer-contact {
+      margin-top: 30px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .footer-icon {
+      margin: 0 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .footer-icon:hover {
+      transform: scale(1.2);
+    }
+    .fade-in-left {
+	-webkit-animation: fade-in-left 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ @-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fade-in-right {
+	-webkit-animation: fade-in-right 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ @-webkit-keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+/**/
+* {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+        /*thanh dieu huong*/
+ header {
+    border-top: 2px solid rgb(100, 104, 85);
+    border-bottom: 2px solid rgb(100, 104, 85);
+    position:absolute;
+    width:100%;
+    background-color: white;
+    z-index: 999;
+    white-space: nowrap;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Thêm thuộc tính position */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 59%; /* Chuyển từ margin-left sang left */
+    transform: translateX(-50%); /* Đưa về giữa màn hình */
+    padding-left: 100px;
+}
+
+nav ul li {
+    margin-right: 5px;
+    color: #060606;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: #141414;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-right: 3px;
+}
+
+nav ul li:hover {
+    color: #be7979; 
+}
+.btnn
+      {
+        padding: 10px 15px;
+        margin-right: 4px;
+            background-color: #333;
+                     color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .btnn:hover{
+            background-color: #f7f7f7;
+            color: #333;
+        }
+.sale-banner {
+    background-color: #ff6347; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+.container ul span:hover {
+    color: #b8b8b8;
+}
+
+/* Thêm vào phần CSS của bạn */
+.tieudethanh  span p{
+    position: relative;
+    color: rgb(255, 2, 2);
+    display: flex;
+    font-size: 30px;
+    font-weight: 900;
+  margin-right: 1000px;
+}
+.user-info {
+    color: #eee;
+}
+.container ul span{
+    margin: 10px;
+}
+#loginTabLink i {
+margin-right: 10px;
+}
+#loginTabLink {
+    font-size: 15px;
+    padding: 11px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(8, 8, 8);
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+.product-category {
+    position: relative;
+    top: 58px;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    z-index: 999;
+}
+
+.product-category li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-category span {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.product-category input {
+    flex: 1;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.info span {
+        color: red;
+    }
+.product-category a {
+color: #ffffff;
+}
+.product-category button {
+    background-color: #827c7c;
+    margin-top: 10px;
+    color: #070707;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-category button:hover {
+    background-color: #fefefe;
+    border: 1px solid black;
+}
+/**/
+.phandau2 i {
+   margin-right: 10px;
+   color: #fff;
+
+}
+.phandau2 {
+  background-color: black;
+  max-width: 100%;
+  color: #fff;
+  display: flex;
+  margin-left: 1px;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: 600;
+}
+#vanchuyen {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(50, 49, 49);
+  color: #fff;
+  padding: 21px 18px;
+}
+#vanchuyen i {
+  margin-right: 10px;
+  font-size: 40px;
+}
+.product-category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    width: 200px; 
+/* Điều chỉnh kích thước dropdown menu tùy ý */
+}
+
+.product-category-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.product-category-dropdown a:hover {
+    background-color: #f7f7f7;
+}
+
+.product-category:hover .product-category-dropdown {
+    display: block;
+}
+.mausac {
+    display: flex;
+}
+ .fade-in-top {
+	-webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ @-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+ /*thong tin gioi thieu ao 1*/
+ .xbox {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: url('https://file.hstatic.net/1000356017/collection/untitled-1_472289bc16f0454f97e9112460bcccc5.jpg') no-repeat right center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.xbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(48, 48, 48, 0.5); /* Màu trắng với độ trong suốt 0.5 */
+  z-index: 1; /* Đảm bảo lớp phủ nằm trên hình nền */
+}
+
+.xbox .content {
+  position: relative;
+  z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
+  width: 60%;
+  padding: 50px 0 0 30px;
+  margin-left: 800px;
+}
+.xbox p, .carbon p  {
+    font-size: 20px;
+  margin: 10px 0 20px;
+  color: #fff;
+  margin-right: 290px;
+}
+.xbox h5 {
+    color: red;
+    font-size: 94px;
+    text-shadow: 8px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.chuongtrinh p{
+      display: flex;
+      font-size: 30px;
+      margin-left: 10px;
+      font-weight: 800;
+      color: #737373;
+}
+/*end*/
+/**/
+.card del {
+    color: grey;
+    margin-right: 10px;
+}
+.pagination {
+  margin-left: 730px;
+margin-top: 700px;
+}
+    </style>
+<body>
+    <div class="phandau2">
+        <span><li><a href=""><i class="	fas fa-phone"></i></a>Liên hệ: 1234-5678-9999</li></span>
+        <span><li><a href=""><i class="far fa-comments"></i></a>Nhắn tin phản hồi qua trang SHOPTOM</li></span>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+              <div class="tieudethanh">
+                <span><p><i>SHOPTOM</i></p></span>
+              </div>
+                
+                <ul>
+                    <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo3()">Trang chủ</li></span>
+                    <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo2()">Hàng mới</li></span>
+                        <span><li id="beautifulDesignLink" onclick="showBeautifulDesignInfo()">Mẫu đẹp</li></span>
+                        <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo1()">Hàng SALE</li></span>
+                        <span><li id="beautifulDesignLink1"  onclick="hienlienhe()">Liên hệ</li></span>
+                        <span><li id="giohang" onclick="viewCart()">
+    
+                            Giỏ hàng</li></span>
+                           <span><li id="vanchuyen" ><i class="fas fa-truck"></i>Vận chuyển</li></span>
+                        <!-- Thêm vào phần header của bạn -->
+                        <li id="loggedInUserContainer" class="logged-in" style="display: none;">
+                            <span class="user-info"><i class="fas fa-user"></i> Xin Chào <span id="loggedInUserUsername"></span> | </span>
+                            <a href="#" class="btn-logout" onclick="logout()">Thoát</a>
+                        </li>
+                        
+                        <span><li id="loginTabLink" onclick="showlogin()"><i class="fas fa-address-card"></i>ĐĂNG NHẬP</li></span>
+    
+                </ul>
+            </nav>
+        
+        </div>
+    </header>
+    <div class="product-category">
+      <span><li><a href=""><i class="fas fa-archive"></i></a> DANH MỤC SẢN PHẨM</li></span>
+      <input type="text" placeholder="Tìm kiếm sản phẩm" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+     <!--thong tin gioi thieu ao 8-->
+     <section class="xbox fade-in-top">
+        <div class="content">
+          <h5><i>SALE 30%</i></h5>
+          <p>Áo polo nam đa dạng phong cách, kiểu dáng trẻ trung, mang đầy sức sống tại OWEN sẽ mang đến cho bạn một phong cách thật thoải mái nhưng vẫn lịch lãm </p>
+        </div>
+      </section>
+<!--end-->
+    <div class="thetongquat">
+    <div class="container">
+        <div class="info fade-in-left">
+            <h2>SẢN PHẨM ĐANG SALE</h2>
+            <h3>Các mẫu đang được ưa chuộng</h3>
+            <ul>
+                <li><i class="fas fa-angle-right"></i><a href="">Polo Classic-fit<span>-30%</span></a></li>
+                <li><i class="fas fa-angle-right"></i><a href="">Polo kiểu áo thun cổ Đức Regular-Fit<span>-30%</span></a> </li>
+                <li><i class="fas fa-angle-right"></i><a href=""> Polo dáng Slim-Fit<span>-30%</span></a> </li>
+                <li><i class="fas fa-angle-right"></i> <a href=""> Polo cổ bo dệt và không có chân cổ<span>-30%</span></a></li>
+                <li><i class="fas fa-angle-right"></i> <a href=""> Polo cổ vải, không có chân cổ<span>-30%</span></a></li>
+                <li><i class="fas fa-angle-right"></i> <a href=""> Polo Áo thun cổ lãnh tụ (cổ tàu)<span>-30%</span></a></li>
+            </ul>       
+            <h3>Kích cỡ</h3>
+            <ul class="sizes">
+                <li><a href="#">S</a></li>
+                <li><a href="#">M</a></li>
+                <li><a href="#">L</a></li>
+                <li><a href="#">XL</a></li>
+                <li><a href="#">2XL</a></li>
+                <li><a href="#">3XL</a></li>
+            </ul>
+            <h3>Màu sắc</h3>
+            <div class="colors">
+                <div class="color" style="background-color: #0098fe;"></div>
+                <div class="color" style="background-color: #f4260f;"></div>
+                <div class="color" style="background-color: #f6f6f8;"></div>
+                <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+            </div>
+            <h3>Phù hợp với các nhu cầu</h3>
+            <div class="kiemtra">
+                <input id="box1" type="checkbox" />
+                <label for="box1">Chạy bộ</label>
+                <br>
+                <input id="box2" type="checkbox" />
+                <label for="box2">Tập Gym</label>
+                <br>
+                <input id="box3" type="checkbox" />
+                <label for="box3">Du lịch</label>
+                <br>
+                <input id="box3" type="checkbox" />
+                <label for="box3">Dự tiệc</label>
+                <br>
+                <input id="box3" type="checkbox" />
+                <label for="box3">Đi làm</label>
+                <br>
+                <input id="box3" type="checkbox" />
+                <label for="box3">Đi chơi</label>
+                <br>
+                <input id="box3" type="checkbox" />
+                <label for="box3">Thể thao</label>
+              </div>
+        </div>
+        <div class="card-container fade-in-right">
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/435/905/products/ao-polo-den-pemd001.jpg?v=1632737676783" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo thể thao</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>399.000</del>199.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/07/dong-phuc-sinh-vien-dai-hoc-nam-can-tho.png" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo DNC</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>299.000</del>129.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/07/dong-phuc-sinh-vien-dai-hoc-nam-can-tho.png" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo DNC</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>299.000</del>129.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/07/dong-phuc-sinh-vien-dai-hoc-nam-can-tho.png" alt="Product Image">
+                <div class="card-content">
+                    <div class="mausac">
+                        <div class="color" style="background-color: gray"></div>
+                <div class="color" style="background-color: black"></div>
+                    </div>
+                    <h2>  Áo Polo DNC</h2>
+                    <h1>Chất liệu : Vải thoáng mát</h1>
+                    <p><del>299.000</del>129.000 VNĐ</p>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</div>
+  <!--thong tin the hinh anh-->
+  <div class="chuongtrinh">
+    <p><i>CÁC CHƯƠNG TRÌNH KHUYẾN MÃI</i></p>
+ </div>
+ <div class="thehinhanh">
+    <div class="cardimg" id="myCard">
+        <img src="https://bizweb.dktcdn.net/100/446/974/files/ao-polo-mlb-men-s-basic-comfortable-fit-collar-t-shirt-new-york-yankees-black-3lpqb0133-50bks-11.jpg?v\u003d1682781247818" alt="Ảnh">
+      <div class="button9-container9">
+        <button class="button9-view9">XEM THÔNG TIN <i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+    
+    <div class="cardimg" id="myCard">
+        <img src="https://bizweb.dktcdn.net/100/446/974/files/ao-polo-mlb-men-s-basic-comfortable-fit-collar-t-shirt-new-york-yankees-black-3lpqb0133-50bks-11.jpg?v\u003d1682781247818" alt="Ảnh">
+        <div class="button9-container9">
+          <button class="button9-view9">XEM THÔNG TIN <i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    
+      <div class="cardimg" id="myCard">
+        <img src="https://bizweb.dktcdn.net/100/446/974/files/ao-polo-mlb-men-s-basic-comfortable-fit-collar-t-shirt-new-york-yankees-black-3lpqb0133-50bks-11.jpg?v\u003d1682781247818" alt="Ảnh">
+        <div class="button9-container9">
+          <button class="button9-view9">XEM THÔNG TIN <i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    
+      <div class="cardimg" id="myCard">
+        <img src="https://bizweb.dktcdn.net/100/446/974/files/ao-polo-mlb-men-s-basic-comfortable-fit-collar-t-shirt-new-york-yankees-black-3lpqb0133-50bks-11.jpg?v\u003d1682781247818" alt="Ảnh">
+        <div class="button9-container9">
+          <button class="button9-view9">XEM THÔNG TIN <i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+<!--end-->
+<!--the ket luan 2-->
+<div class="theketluan2">
+    <footer>
+      <div class="coolmate-listen">
+        <p><strong>SHOP TOM</strong> lắng nghe bạn!</p>
+      </div>
+      <p>Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+  
+      <div class="footer-contact">
+        <p><strong>Đóng góp ý kiến:</strong></p>
+        <p>Liên Hệ qua Hotline: 1900.02020202 - 077.7777.7777 (8:30 - 22:00)</p>
+        <p>Địa chỉ Email: SHOPTOM@Email.com</p>
+      </div>
+    </footer>
+  </div>
+<!--end 2-->
+<!--ket luan footer-->
+<div id="footer">
+    <div id="footer-contact">
+        <h3 class="footer-title">
+            SHOP TOM ONLINE
+        </h3>
+        <div class="footer-bar"></div>
+        <div class="footer-text">
+            Tại SHOP TOM, bạn sẽ khám phá một kho hàng ảo đầy ắp những sản phẩm chất lượng từ các danh mục đa dạng như thời trang, gia dụng, công nghệ, và nhiều hơn nữa. Đội ngũ chăm sóc khách hàng chuyên nghiệp và dịch vụ vận chuyển toàn quốc nhanh chóng là cam kết của chúng tôi để đảm bảo bạn có được những trải nghiệm mua sắm tuyệt vời mà không cần phải bước ra khỏi nhà.
+        </div>
+        <div class="footer-bar"></div>
+        <div class="social">
+            <a href="#" class="icon icon-mono facebook">facebook</a>
+            <a href="#" class="icon icon-mono twitter">twitter</a>
+            <a href="#" class="icon icon-mono googleplus">google+</a>
+            <a href="#" class="icon icon-mono github">github</a>
+            <a href="#" class="icon icon-mono rss">rss</a>
+        </div>
+    </div>
+    
+    <div id="footer-contact">
+        <h3 class="footer-title">
+            Đăng ký thông tin
+        </h3>
+        <div class="footer-bar"></div>
+        <div class="footer-text">
+            Chúng tôi không chỉ cung cấp sản phẩm chất lượng cao mà còn chú trọng đến trải nghiệm mua sắm của bạn từ khi chọn lựa đến khi nhận hàng. Hãy để SHOP TOM là người bạn đồng hành, mang đến cho bạn sự tiện lợi và phong cách tinh tế mỗi khi bạn nhấp chuột vào thế giới mua sắm trực tuyến của chúng tôi.
+        </div>
+        <input type="text" name='yourMail' placeholder="Nhập mail của bạn"></input>
+        <input type="submit" name="signup4news" value="ĐĂNG KÝ"></input>
+    </div>
+    </div>
+    <div id="lightBox">
+    <img id="anhPhongTo" src="">
+    <div id="thongtin">
+        <h1 id="product_name"></h1>
+            <br/>
+    </div>
+    </div>
+    </div>
+<!--end-->
+</body>
+
+</html>

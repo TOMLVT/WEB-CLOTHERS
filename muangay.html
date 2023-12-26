@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>San pham dang hot</title>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+        <style>
+            .screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color:  rgb(0, 0, 0);
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #ffffff;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; 
+} 
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 100%;
+  font-size: 1.2em;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+code {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-weight: bold;
+}
+
+/* Header */
+
+.masthead {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #000000;
+	text-align: center;
+	border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+h1 {
+  color: #fff;
+}
+/* Colophon section */
+.colophon {
+	padding: 2em;
+	background: hsl(0, 0%, 10%);
+	color: white;
+  font-size: 90%;
+	text-align: center;
+  line-height: 1.8em;
+}
+
+.colophon a {
+	color: white;
+}
+
+.colophon a:hover,
+.colophon a:focus {
+	border-bottom: 1px solid rgb(9, 9, 9);
+}
+.cards {
+	max-width: 25em;
+	margin: 1em auto;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.cards a {
+	display: block;
+	margin-bottom: 1em;
+	text-decoration: none;
+}
+
+.caption {
+	padding: 1em;
+	font-size: 90%;
+	color: rgb(5, 5, 5);
+}
+
+.caption-title {
+	margin: 0;
+	font-size: 1.4em;
+	line-height: 1em;
+}
+
+.location {
+  padding: .5em 0;
+  color: hsl(0, 98%, 50%);
+}
+
+.caption p {
+	margin-top: .5em;
+	margin-bottom: 0;
+  line-height: 1.3em;
+}
+
+.cards a:focus .caption,
+.cards a:hover .caption {
+	background: hsl(0, 0%, 97%);
+}
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 27em) {
+
+		.cards {
+			margin: 0 auto;
+			padding: 1em;
+		}
+    
+    .card-item,
+    .card-item a {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .cards a:focus,
+		.cards a:hover {
+			outline: 1px solid hsl(0, 0%, 80%);
+		}
+    
+    .cards a:focus .caption,
+    .cards a:hover .caption {
+      background: white;
+    }
+    
+		.card {
+			margin: .5em;
+			display: grid;
+			grid-template-columns: 8em auto;
+      overflow: hidden;
+		}
+    
+    .card img {
+    }
+    
+    .caption {
+      background: white;
+    }
+    
+	}
+
+	@media screen and (min-width: 62em) {
+
+		.cards {
+			max-width: none;
+			margin: 1em 0;
+      padding: 0 1em;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 25em);
+			grid-gap: 1em;
+			justify-content: center;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .card {
+			display: block;
+		}
+    
+    .double img {
+      height: calc( (100% / 3) * 2 + .5em);
+    }
+
+	}
+
+}
+.tilt-in-left-1 {
+	-webkit-animation: tilt-in-left-1 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-left-1 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+            transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-left-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+            transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+.tilt-in-right-1 {
+	-webkit-animation: tilt-in-right-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-right-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes tilt-in-right-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+            transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-right-1 {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+            transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+.tilt-in-left-2 {
+	-webkit-animation: tilt-in-left-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-left-2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes tilt-in-left-2 {
+  0% {
+    -webkit-transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+            transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-left-2 {
+  0% {
+    -webkit-transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+            transform: rotateX(30deg) translateX(-300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+.card {
+  position: relative;
+  border: 1px solid black;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+            </style>
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<header class="masthead">
+  <h1 class="site-title">SẢN PHẨM ĐANG HOT</h1>
+</header>
+
+<main id="content" class="main-area">
+  <ul class="cards">
+    <li class="card-item double">
+        <figure class="card tilt-in-left-1 card">
+          <img src="https://cf.shopee.vn/file/26acd534115ddc33a6ed1702c2006e80" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO NAM YODY</h3>
+            <div class="location">299 VNĐ</div>
+            <p>Áo polo không chỉ là một phần của thời trang thể thao mà còn trở thành một biểu tượng của phong cách casual và lịch sự. Đối với nhiều người, áo polo là sự kết hợp hoàn hảo giữa sự thoải mái và sự sang trọng</p>
+          </figcaption>
+        </figure>
+      </li>
+      
+    <li class="card-item">
+        <figure class="card tilt-in-right-1">
+          <img src="https://cf.shopee.vn/file/74bee86711ecd0436d2cb1b0913496d8" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card tilt-in-right-1">
+          <img src="https://cf.shopee.vn/file/8370bbd83a155995508696f87a802833" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+                <figure class="card tilt-in-right-1">
+          <img src="https://cf.shopee.vn/file/7d5d936899771452fdca416df4df61a4" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card tilt-in-left-2">
+          <img src="https://cf.shopee.vn/file/sg-11134201-23020-ivptjgdop5mvb9" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item double">
+        <figure class="card tilt-in-left-2">
+          <img src="https://localbrand.vn/wp-content/uploads/2023/02/ao-polo-local-brand-7-2.jpg" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">TỔNG HỢP CÁC LOẠI ÁO POLO ĐANG HOT !!!</h3>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card tilt-in-left-2">
+          <img src="https://down-vn.img.susercontent.com/file/d8eceb8faa676bb4bfc67a4d8edd6074_tn" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card">
+          <img src="https://bizweb.dktcdn.net/100/415/697/products/1a-969ceec5-a7a3-407b-af45-b8a5e6837ef0.jpg?v=1670770819703" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card">
+          <img src="https://vn-test-11.slatic.net/p/dff47cbc9ee27e575967006a10ad2be0.jpg" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li class="card-item">
+        <figure class="card">
+          <img src="https://down-vn.img.susercontent.com/file/0b95dee44d6b9f9fead0d8595254d6e7_tn" alt="">
+          <figcaption class="caption">
+            <h3 class="caption-title">ÁO POLO THỂ THAO</h3>
+            <div class="location">199 VNĐ</div>
+            <p>Kiểu dáng thể thao áo polo thường có kiểu dáng ôm sát cơ thể, tạo nên vẻ ngoại hình thể thao và linh hoạt.</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+  </ul>
+</main>
+<footer class="colophon grid">
+  <aside>THÔNG TIN: <a href="" target="_blank" rel="nofollow">SHOP TOM POLO</a>.</aside>
+</footer>
+      </body>
+</html>

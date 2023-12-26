@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TOM</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="onda3.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .tieudedonhang h2 {
+            display: flex;
+            margin-left: 130px;
+            margin-top: 100px;
+        }
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        form {
+            flex: 1;
+            margin-right: 20px;
+        }
+ form input {
+    border: 1px solid rgb(98, 98, 98);
+    border-radius: 13px;
+ }
+ form textarea {
+    border-radius: 13px;
+ }
+        .payment-method {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .summary {
+    display: flex;
+    height: 1000px;
+    width: 50%;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    max-height: 900px; /* Đặt giá trị max-height tùy chỉnh theo nhu cầu của bạn */
+    overflow-y: auto;
+}
+        .discount-code {
+            margin-top: 10px;
+        }
+
+        .total {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: right;
+        }
+        .total p {
+            margin-bottom: 13px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+.summary h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #000;
+            border: 1px solid black;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product-details {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .product-details div {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.product-details img {
+    width: 80px; /* Điều chỉnh kích thước ảnh sản phẩm */
+    height: 60px; /* Điều chỉnh kích thước ảnh sản phẩm */
+    margin-right: 10px;
+    object-fit: cover;
+}
+.product-details span {
+    flex-grow: 1;
+}
+.product-details input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.product-details input[type="checkbox"]:checked {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+/*footer*/
+#footer {
+	clear: both;
+	width: 100%;
+	height: 350px;
+	background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+	#footer-contact, #footer-signup{
+		width: 500px;
+		float: left;
+	}
+
+	.icon {
+	  display: inline-block;
+	  vertical-align: top;
+	  overflow: hidden;
+	  margin: 1px;
+	  width: 24px;
+	  height: 24px;
+	  font-size: 0;
+	  text-indent: -9999px;
+	}
+	.icon-mono {
+	  background: url("https://i.imgur.com/zwOnn8F.png");
+	  background-image: url("https://i.imgur.com/zwOnn8F.png"), none;
+	  background-color: #201c1c;
+	  -webkit-transition: background 0.3s;
+	          transition: background 0.3s;
+	}
+
+	.icon-mono.facebook {
+	  background-position: 0 0;
+	}
+
+	.icon-mono.facebook:hover {
+	  background-color: #3b5998;
+	  background-position: 0 -24px;
+	}
+
+	.icon-mono.twitter {
+	  background-position: -24px 0;
+	}
+
+	.icon-mono.twitter:hover {
+	  background-color: #4099ff;
+	  background-position: -24px -24px;
+	}
+
+	.icon-mono.googleplus {
+	  background-position: -48px 0;
+	}
+
+	.icon-mono.googleplus:hover {
+	  background-color: #d34836;
+	  background-position: -48px -24px;
+	}
+
+	.icon-mono.github {
+	  background-position: -72px 0;
+	}
+
+	.icon-mono.github:hover {
+	  background-color: #333333;
+	  background-position: -72px -24px;
+	}
+
+	.icon-mono.rss {
+	  background-position: -96px 0;
+	}
+
+	.icon-mono.rss:hover {
+	  background-color: #ee802f;
+	  background-position: -96px -24px;
+	}
+
+	.footer-title {
+		color: #f5f5f5;
+		text-transform: uppercase;
+		font-size: 95%;
+		font-family: Lato, helvetica, arial, sans-serif;
+		line-height: 1.4;
+		font-weight: bold;
+		margin-top: 15px;
+		cursor: default;
+	}
+
+	.footer-bar {
+		color: #dddddd;
+		background: #ffffff;
+		opacity: .3;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		width: 30px;
+		display: block;
+		height: 3px;
+	}
+
+	.footer-text {
+		color: #dddddd;
+		font-family: Lato, helvetica, arial, sans-serif;
+		font-size: 15px;
+		font-weight: normal;
+		line-height: 1.6;
+		margin-bottom: 1.2em;
+		cursor: default;
+	}
+
+	#footer-contact {
+		margin-left: 50px;
+	}
+
+	#footer input[type='text'] {
+		width: 300px;
+		height: 30px;
+		padding: 5px;
+		font-size: 13px;
+		border: 1px solid #ccc;
+		outline: medium none;
+	}
+		#footer input[type='text']:focus {
+			background: #fff;
+			border-color: #999;			
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+			color: rgba(0, 0, 0, 0.75);
+			transition: .3s;
+		}
+
+	#footer input[type='submit'] {
+		background: #000000;
+		border: 1px solid #dcd4d1;
+		color: #fff;
+		padding: 7px;
+		width: 100px;
+		transition: .2s;
+		cursor: pointer;
+	}
+		#footer input[type='submit']:hover {
+			background: rgb(77, 84, 79);
+		}
+.summary h2 {
+    font-size: 25px;
+}
+.summary h1 {
+    font-size: 22px;
+}
+/*end*/
+* {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+        /*thanh dieu huong*/
+ header {
+    border-top: 2px solid rgb(100, 104, 85);
+    border-bottom: 2px solid rgb(100, 104, 85);
+    position:absolute;
+    width:100%;
+    background-color: white;
+    padding: 12px 0;
+    z-index: 999;
+    white-space: nowrap;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Thêm thuộc tính position */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 59%; /* Chuyển từ margin-left sang left */
+    transform: translateX(-50%); /* Đưa về giữa màn hình */
+    padding-left: 100px;
+}
+
+nav ul li {
+    margin-right: 5px;
+    color: #060606;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: #141414;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-right: 3px;
+}
+
+nav ul li:hover {
+    color: #be7979; 
+}
+.btnn
+      {
+        padding: 10px 15px;
+            margin-right: 4px;
+            background-color: #333;
+                     color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .btnn:hover{
+            background-color: #f7f7f7;
+            color: #333;
+        }
+.sale-banner {
+    background-color: #ff6347; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+.container ul span:hover {
+    color: #b8b8b8;
+}
+
+/* Thêm vào phần CSS của bạn */
+.tieudethanh  span p{
+    position: relative;
+    color: rgb(255, 2, 2);
+    display: flex;
+    font-size: 30px;
+    font-weight: 900;
+  margin-right: 1000px;
+}
+.user-info {
+    color: #eee;
+}
+.container ul span{
+    margin: 10px;
+}
+#loginTabLink i {
+margin-right: 10px;
+}
+#loginTabLink {
+    font-size: 15px;
+    padding: 11px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(8, 8, 8);
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+.product-category {
+    position: relative;
+    top: 58px;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-category li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-category span {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.product-category input {
+    flex: 1;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.product-category a {
+color: #ffffff;
+}
+.product-category button {
+    background-color: #827c7c;
+    margin-top: 10px;
+    color: #070707;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 9px;
+}
+
+.product-category button:hover {
+    background-color: #fefefe;
+    border: 1px solid black;
+}
+/**/
+.phandau2 i {
+   margin-right: 10px;
+   color: #fff;
+
+}
+.phandau2 {
+  background-color: #333;
+  max-width: 100%;
+  color: #fff;
+  display: flex;
+  margin-left: 1px;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: 600;
+}
+#vanchuyen {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(50, 49, 49);
+  color: #fff;
+  padding: 15px 18px;
+}
+#vanchuyen i {
+  margin-right: 10px;
+  font-size: 40px;
+}
+.product-category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    width: 200px; /* Điều chỉnh kích thước dropdown menu tùy ý */
+}
+
+.product-category-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.product-category-dropdown a:hover {
+    background-color: #f7f7f7;
+}
+
+.product-category:hover .product-category-dropdown {
+    display: block;
+}
+/*  */
+.promo-description {
+        font-size: 14px;
+        color: #888;
+        margin-top: 5px;
+    }
+    .register-link {
+    font-size: 14px;
+    color: #3498db; /* Màu xanh dương */
+    margin-top: 5px;
+}
+.register-link a {
+    text-decoration: none;
+}
+.tieudeluuy p {
+        font-size: 14px;
+        color: #888;
+        margin-top: 5px;
+    }
+    /*ket luan 2*/
+.theketluan2 {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .coolmate-listen {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .footer-contact {
+      margin-top: 30px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .footer-icon {
+      margin: 0 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .footer-icon:hover {
+      transform: scale(1.2);
+    }
+    .mausac {
+        display: flex;
+    }
+    /*css bang kich thuoc quan ao*/
+    .thebangsize {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0e0e0e;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    /*end bang kich thuoc*/
+    .fade-in-left {
+	-webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ @-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Thêm CSS sau mã CSS hiện tại của bạn */
+.modal {
+    display: none;
+    position: fixed;
+    top: 17%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    margin-left: 330px;
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+.fade-in-fwd {
+	-webkit-animation: fade-in-fwd 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-fwd 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ @-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="phandau2">
+        <span><li><a href=""><i class="	fas fa-phone"></i></a>Liên hệ: 1234-5678-9999</li></span>
+        <span><li><a href=""><i class="far fa-comments"></i></a>Nhắn tin phản hồi qua trang SHOPTOM</li></span>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+              <div class="tieudethanh">
+                <span><p><i>SHOPTOM</i></p></span>
+              </div>
+                
+                <ul>
+                    <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo3()">Trang chủ</li></span>
+                    <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo2()">Hàng mới</li></span>
+                        <span><li id="beautifulDesignLink" onclick="showBeautifulDesignInfo()">Mẫu đẹp</li></span>
+                        <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo1()">Hàng SALE</li></span>
+                        <span><li id="beautifulDesignLink1"  onclick="hienlienhe()">Liên hệ</li></span>
+                        <span><li id="giohang" onclick="viewCart()">
+    
+                            Giỏ hàng</li></span>
+                           <span><li id="vanchuyen" ><i class="fas fa-truck"></i>Vận chuyển</li></span>
+                        <!-- Thêm vào phần header của bạn -->
+                        <li id="loggedInUserContainer" class="logged-in" style="display: none;">
+                            <span class="user-info"><i class="fas fa-user"></i> Xin Chào <span id="loggedInUserUsername"></span> | </span>
+                            <a href="#" class="btn-logout" onclick="logout()">Thoát</a>
+                        </li>
+                        
+                        <span><li id="loginTabLink" onclick="showlogin()"><i class="fas fa-address-card"></i>ĐĂNG NHẬP</li></span>
+    
+                </ul>
+            </nav>
+        
+        </div>
+    </header>
+    <div class="product-category">
+      <span><li><a href=""><i class="fas fa-archive"></i></a> DANH MỤC SẢN PHẨM</li></span>
+      <input type="text" placeholder="Tìm kiếm sản phẩm" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  <div class="tieudedonhang fade-in-left">
+            <h2>THÔNG TIN VẬN CHUYỂN</h2>
+        </div>
+    <section>
+      
+
+        <div class="payment-method fade-in-left">
+           <form>
+            <p class="register-link">Bạn chưa có tài khoản? <a href="#" id="clicklogin" onclick="hienlogin">Đăng ký ngay!</a></p>
+            <label for="fullName">Họ tên:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">Thành phố:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="district">Quận/Huyện:</label>
+            <select id="district" name="district" required>
+                <option value="">Chọn Quận/Huyện</option>
+                <option value="district1">Quận 1</option>
+                <option value="district2">Quận 2</option>
+                <!-- Thêm các option khác tương tự -->
+            </select>
+
+            <label for="ward">Phường/Xã:</label>
+            <select id="ward" name="ward" required>
+                <option value="">Chọn Phường/Xã</option>
+                <option value="ward1">Phường 1</option>
+                <option value="ward2">Phường 2</option>
+                <!-- Thêm các option khác tương tự -->
+            </select>
+
+            <label for="note">Ghi chú thêm:</label>
+            <textarea id="note" name="note" rows="4"></textarea>
+            <div class="payment-method">
+                <label for="paymentMethod">Chọn hình thức thanh toán:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="cash">Thanh toán khi nhận hàng</option>
+                    <option value="momo">Momo</option>
+                    <option value="zalopay">ZaloPay</option>
+                    <!-- Thêm các hình thức thanh toán khác nếu cần -->
+                </select>
+            </div>
+            <div class="tieudeluuy">
+                <p>Ghi chú : Hãy điền chính xác các thông tin để đơn vị vận chuyển giao chính xác nơi cho bạn nhé !!!</p>
+            </div>
+            <button class="checkout-all-btn" onclick="checkoutAll()">Thanh toán tất cả</button>
+
+        </form>
+        </div>
+
+        <div class="summary">
+            <h2>DANH SÁCH VÀ THÔNG TIN ĐƠN HÀNG</h2>
+            <h1>Giỏ Hàng</h1>
+            <div class="product-details" id="productDetails">
+                <!-- Display product details here -->
+            </div>
+            <div class="discount-code">
+                <label for="discountCode">Nhập mã giảm giá:</label>
+                <input type="text" id="discountCode" name="discountCode">
+                <p class="promo-description">Nhập mã giảm giá để nhận ưu đãi hấp dẫn và giảm giá cho đơn hàng của bạn.</p>
+                <button onclick="applyDiscount()">Áp Dụng</button>
+                <div id="appliedPromoCode"></div>
+            </div>
+            <div class="total">
+                <p>Tạm tính: <span class="vnd-currency" id="productPrice">0 VNĐ</span></p>
+                <p>Phí giao hàng: Miễn phí</p>
+                <p>Tổng: <span class="vnd-currency" id="totalAmount">0</span></p>
+                <p>Số tiền được giảm: <span class="vnd-currency" id="discountAmount">0</span></p>
+                <p>Phần trăm giảm giá: <span id="discountPercentage">0%</span></p>
+                <button class="remove-selected-btn" onclick="removeSelectedProducts()">Xóa đã chọn</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Nếu bạn không hài lòng với sản phẩm của chúng tôi? Bạn hoàn toàn có thể trả lại sản phẩm.<a href="#">Tìm hiểu thêm tại đây.</a></p>
+    </footer>
+  <div class="product-details" id="productDetails" style="max-height: 200px; overflow-y: auto;">
+    <!-- Display product details here -->
+</div>
+<!--bang kich thuoc cua ao-->
+<div class="thebangsize">
+    <table>
+        <tr>
+            <th>SIZE</th>
+            <th>CHIỀU CAO</th>
+            <th>CÂN NẶNG</th>
+        </tr>
+        <tr>
+            <td>S</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+        <tr>
+            <td>XL</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+        <tr>
+            <td>2XL</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+        <tr>
+            <td>3XL</td>
+            <td>165 - 178 cm</td>
+            <td>56 - 78 kg</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>CHIỀU DÀI ÁO</th>
+            <th>CHIỀU NGANG ÁO</th>
+            <th>CHIỀU RỘNG ÁO</th>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+        <tr>
+          
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+        <tr>
+          
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+        <tr>
+           
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+        <tr>
+          
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+        <tr>
+          
+            <td>125</td>
+            <td>124</td>
+            <td>123</td>
+        </tr>
+    </table>
+</div>
+<!--end bang kich thuoc-->
+<!--the ket luan 2-->
+<div class="theketluan2">
+    <footer>
+      <div class="coolmate-listen">
+        <p><strong>SHOP TOM</strong> lắng nghe bạn!</p>
+      </div>
+      <p>Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+  
+      <div class="footer-contact">
+        <p><strong>Đóng góp ý kiến:</strong></p>
+        <p>Liên Hệ qua Hotline: 1900.02020202 - 077.7777.7777 (8:30 - 22:00)</p>
+        <p>Địa chỉ Email: SHOPTOM@Email.com</p>
+      </div>
+    </footer>
+  </div>
+<!--end 2-->
+ <!--ket luan footer-->
+ <div id="footer">
+    <div id="footer-contact">
+        <h3 class="footer-title">
+            SHOP TOM ONLINE
+        </h3>
+        <div class="footer-bar"></div>
+        <div class="footer-text">
+            Tại SHOP TOM, bạn sẽ khám phá một kho hàng ảo đầy ắp những sản phẩm chất lượng từ các danh mục đa dạng như thời trang, gia dụng, công nghệ, và nhiều hơn nữa. Đội ngũ chăm sóc khách hàng chuyên nghiệp và dịch vụ vận chuyển toàn quốc nhanh chóng là cam kết của chúng tôi để đảm bảo bạn có được những trải nghiệm mua sắm tuyệt vời mà không cần phải bước ra khỏi nhà.
+        </div>
+        <div class="footer-bar"></div>
+        <div class="social">
+            <a href="#" class="icon icon-mono facebook">facebook</a>
+            <a href="#" class="icon icon-mono twitter">twitter</a>
+            <a href="#" class="icon icon-mono googleplus">google+</a>
+            <a href="#" class="icon icon-mono github">github</a>
+            <a href="#" class="icon icon-mono rss">rss</a>
+        </div>
+    </div>
+    
+    <div id="footer-contact">
+        <h3 class="footer-title">
+            Đăng ký thông tin
+        </h3>
+        <div class="footer-bar"></div>
+        <div class="footer-text">
+            Chúng tôi không chỉ cung cấp sản phẩm chất lượng cao mà còn chú trọng đến trải nghiệm mua sắm của bạn từ khi chọn lựa đến khi nhận hàng. Hãy để SHOP TOM là người bạn đồng hành, mang đến cho bạn sự tiện lợi và phong cách tinh tế mỗi khi bạn nhấp chuột vào thế giới mua sắm trực tuyến của chúng tôi.
+        </div>
+        <input type="text" name='yourMail' placeholder="Nhập mail của bạn"></input>
+        <input type="submit" name="signup4news" value="ĐĂNG KÝ"></input>
+    </div>
+    </div>
+    <div id="lightBox">
+    <img id="anhPhongTo" src="">
+    <div id="thongtin">
+        <h1 id="product_name"></h1>
+            <br/>
+    </div>
+    </div>
+    </div>
+<!--end-->
+<!-- Thêm cửa sổ thông báo -->
+<div id="paymentSuccessModal" class="modal fade-in-fwd">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Thanh toán thành công!</h2>
+        <p>Cảm ơn bạn đã mua hàng.</p>
+        <p> Đơn hàng của bạn đã được xác nhận.</p>
+        <p> <span id=""></span></p>
+        <p>Tổng số tiền: <span id="totalAmountPaid"></span></p>
+    </div>
+</div>
+
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.checkout-all-btn').addEventListener('click', function (event) {
+            event.preventDefault();
+            checkoutAll();
+        });
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var cartItemsParam = urlParams.get('cartItems');
+    //
+    var urlParams = new URLSearchParams(window.location.search);
+    var promoCode = urlParams.get('promoCode');
+    if (promoCode) {
+        document.getElementById('promoCode').value = promoCode;
+    }
+    //
+    var totalAmount = 0; // Khai báo biến totalAmount
+
+    if (cartItemsParam) {
+        var cartItems = JSON.parse(decodeURIComponent(cartItemsParam));
+
+        // Hiển thị thông tin giỏ hàng
+        var productDetails = document.getElementById('productDetails');
+
+        cartItems.forEach(function (item, index) {
+            var productItem = document.createElement('div');
+            productItem.innerHTML = `
+                <div>
+                    <input type="checkbox" id="productCheckbox${index}" name="productCheckbox" value="${index}">
+                    <img src="${item.image}" alt="${item.name}" style="width: 150px; height: 120px;">
+                    <span>${item.name}</span>
+                    <span>${formatCurrency(item.price)}</span>
+                </div>
+            `;
+            productDetails.appendChild(productItem);
+
+            // Tính tổng số tiền
+            totalAmount += parseFloat(item.price);
+        });
+
+        // Hiển thị tổng số tiền
+        document.getElementById('productPrice').innerText = formatCurrency(totalAmount.toFixed(2));
+        document.getElementById('totalAmount').innerText = formatCurrency(totalAmount.toFixed(2));
+
+        // Cập nhật tổng số tiền của tất cả sản phẩm
+        document.getElementById('checkoutAllAmount').innerText = formatCurrency(totalAmount.toFixed(2));
+    }
+});
+
+function formatCurrency(amount) {
+    return amount.replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' VNĐ';
+}
+function removeSelectedProducts() {
+    var productDetails = document.getElementById('productDetails');
+    var checkboxes = document.getElementsByName('productCheckbox');
+    var cartItems = JSON.parse(decodeURIComponent(window.location.search.replace('?cartItems=', '')));
+
+    // Xóa các sản phẩm đã chọn
+    var remainingItems = [];
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (!checkboxes[i].checked) {
+            remainingItems.push(cartItems[i]);
+        }
+    }
+
+    // Cập nhật giao diện
+    productDetails.innerHTML = '';
+    totalAmount = 0; // Đặt lại tổng số tiền
+
+    remainingItems.forEach(function (item, index) {
+        var productItem = document.createElement('div');
+        productItem.innerHTML = `
+            <div>
+                <input type="checkbox" id="productCheckbox${index}" name="productCheckbox" value="${index}">
+                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;">
+                <span>${item.name}</span>
+                <span>${item.price}</span>
+            </div>
+        `;
+        productDetails.appendChild(productItem);
+
+        // Tính tổng số tiền
+        totalAmount += parseFloat(item.price);
+    });
+
+    // Hiển thị tổng số tiền
+    document.getElementById('productPrice').innerText = totalAmount.toFixed(2);
+    document.getElementById('totalAmount').innerText = totalAmount.toFixed(2);
+}
+// ham viet tinh giam gia san pham khi nhan ma
+function applyDiscount() {
+    var discountCode = document.getElementById('discountCode').value;
+    if (isValidDiscountCode(discountCode)) {
+        var currentTotal = parseFloat(document.getElementById('totalAmount').innerText.replace('VNĐ', '').trim());
+        var discountAmount = 0;
+        var discountPercentage = 20; 
+        discountAmount = currentTotal * (discountPercentage / 100);
+var discountedTotal = currentTotal - discountAmount;
+document.getElementById('totalAmount').innerText = formatCurrency(discountedTotal.toFixed(2));
+document.getElementById('discountAmount').innerText = formatCurrency(discountAmount.toFixed(2));
+document.getElementById('discountPercentage').innerText = discountPercentage + '%';
+        alert('Mã giảm giá đã được áp dụng!\nSố tiền giảm: ' + formatCurrency(discountAmount.toFixed(2)) + '\nPhần trăm giảm: ' + discountPercentage + '%');
+
+    } else {
+        alert('Mã giảm giá không hợp lệ. Vui lòng kiểm tra lại.');
+    }
+}
+function isValidDiscountCode(code) {
+    return code.length >= 6;
+}
+function showPaymentSuccessModal(totalAmountPaid) {
+    var modal = document.getElementById('paymentSuccessModal');
+    var totalAmountElement = document.getElementById('totalAmountPaid');
+    totalAmountElement.innerText = formatCurrency(totalAmountPaid);
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    var modal = document.getElementById('paymentSuccessModal');
+    modal.style.display = 'none';
+}
+function checkoutAll() {
+    var totalAmount = parseFloat(document.getElementById('totalAmount').innerText.replace('VNĐ', '').trim());
+    var discountAmount = parseFloat(document.getElementById('discountAmount').innerText.replace('VNĐ', '').trim());
+    var totalAmountPaid = totalAmount - discountAmount;
+
+    // Gọi hàm hiển thị thông báo
+    showPaymentSuccessModal(totalAmountPaid);
+}
+function formatCurrency(amount) {
+    return amount.toString().replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' VNĐ';
+}
+
+function hienlogin() {
+    window.location.href = 'file:///C:/Users/Admin/Downloads/WEB%20TH%E1%BB%9CI%20TRANG/signin.html';
+}
+document.getElementById('clicklogin').addEventListener('click', hienlogin);
+    </script>
+</body>
+
+</html>

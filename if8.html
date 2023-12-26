@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TOM</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="onda3.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+        /*thanh dieu huong*/
+ header {
+    border-top: 2px solid rgb(100, 104, 85);
+    border-bottom: 2px solid rgb(100, 104, 85);
+    position:absolute;
+    width:100%;
+    background-color: white;
+    padding: 12px 0;
+    z-index: 999;
+    white-space: nowrap;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Thêm thuộc tính position */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    left: 59%; /* Chuyển từ margin-left sang left */
+    transform: translateX(-50%); /* Đưa về giữa màn hình */
+    padding-left: 100px;
+}
+
+nav ul li {
+    margin-right: 5px;
+    color: #060606;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: #141414;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-right: 3px;
+}
+
+nav ul li:hover {
+    color: #be7979; 
+}
+.btnn
+      {
+        padding: 10px 15px;
+            margin-right: 4px;
+            background-color: #333;
+                     color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .btnn:hover{
+            background-color: #f7f7f7;
+            color: #333;
+        }
+.sale-banner {
+    background-color: #ff6347; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+.container ul span:hover {
+    color: #b8b8b8;
+}
+
+/* Thêm vào phần CSS của bạn */
+.tieudethanh  span p{
+    position: relative;
+    color: rgb(255, 2, 2);
+    display: flex;
+    font-size: 30px;
+    font-weight: 900;
+  margin-right: 1000px;
+}
+.user-info {
+    color: #eee;
+}
+.container ul span{
+    margin: 10px;
+}
+#loginTabLink i {
+margin-right: 10px;
+}
+#loginTabLink {
+    font-size: 15px;
+    padding: 11px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(8, 8, 8);
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.product-category {
+    position: relative;
+    top: 58px;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 0px 28px 0px black;
+}
+
+.product-category li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-category span {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.product-category input {
+    flex: 1;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.product-category a {
+color: #ffffff;
+}
+.product-category button {
+    background-color: #827c7c;
+    margin-top: 10px;
+    color: #070707;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-category button:hover {
+    background-color: #fefefe;
+    border: 1px solid black;
+}
+/**/
+.phandau2 i {
+   margin-right: 10px;
+   color: #fff;
+
+}
+.phandau2 {
+  background-color: #333;
+  max-width: 100%;
+  color: #fff;
+  display: flex;
+  margin-left: 1px;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: 600;
+}
+#vanchuyen {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(50, 49, 49);
+  color: #fff;
+  padding: 15px 18px;
+}
+#vanchuyen i {
+  margin-right: 10px;
+  font-size: 40px;
+}
+    </style>
+  <div class="phandau2">
+    <span><li><a href=""><i class="	fas fa-phone"></i></a>Liên hệ: 1234-5678-9999</li></span>
+    <span><li><a href=""><i class="far fa-comments"></i></a>Nhắn tin phản hồi qua trang SHOPTOM</li></span>
+</div>
+<header>
+    <div class="container">
+        <nav>
+          <div class="tieudethanh">
+            <span><p><i>SHOPTOM</i></p></span>
+          </div>
+            
+            <ul>
+                <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo3()">Trang chủ</li></span>
+                <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo2()">Hàng mới</li></span>
+                    <span><li id="beautifulDesignLink" onclick="showBeautifulDesignInfo()">Mẫu đẹp</li></span>
+                    <span><li id="beautifulDesignLink1" onclick="showBeautifulDesignInfo1()">Hàng SALE</li></span>
+                    <span><li id="beautifulDesignLink1"  onclick="hienlienhe()">Liên hệ</li></span>
+                    <span><li id="giohang" onclick="viewCart()">
+
+                        Giỏ hàng</li></span>
+                       <span><li id="vanchuyen" ><i class="fas fa-truck"></i>Vận chuyển</li></span>
+                    <!-- Thêm vào phần header của bạn -->
+                    <li id="loggedInUserContainer" class="logged-in" style="display: none;">
+                        <span class="user-info"><i class="fas fa-user"></i> Xin Chào <span id="loggedInUserUsername"></span> | </span>
+                        <a href="#" class="btn-logout" onclick="logout()">Thoát</a>
+                    </li>
+                    
+                    <span><li id="loginTabLink" onclick="showlogin()"><i class="fas fa-address-card"></i>ĐĂNG NHẬP</li></span>
+
+            </ul>
+        </nav>
+    
+    </div>
+</header>
+<div class="product-category">
+    <span><li><a href=""><i class="fas fa-archive"></i></a> DANH MỤC SẢN PHẨM</li></span>
+    <input type="text" placeholder="Tìm kiếm sản phẩm" />
+    <button><i class="fas fa-search"></i></button>
+</div>
+    <!--end-->
+</body>
+</html>
